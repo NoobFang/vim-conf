@@ -1,0 +1,58 @@
+if &compatible
+    set nocompatible
+end
+
+filetype off
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage Vundle  
+" required!   
+Bundle 'gmarik/vundle'  
+
+" My Bundles here:  /* 插件配置格式 */  
+"     
+" original repos on github
+" （Github网站上非vim-scripts仓库的插件，按下面格式填写）  
+Bundle 'Lokaltog/vim-easymotion'  
+Bundle 'Lokaltog/vim-powerline'
+Bundle 'Mizuchi/STL-Syntax'
+Bundle 'kshenoy/vim-signature'
+Bundle 'scrooloose/nerdtree'
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'scrooloose/syntastic'
+Bundle 'sjl/gundo.vim'
+Bundle 'mhinz/vim-startify'
+Bundle 'gcmt/wildfire.vim'
+Bundle 'Raimondi/delimitMate'
+"Bundle 'Valloric/YouCompleteMe'
+"Bundle 'Rip-Rip/clang_complete'
+Bundle 'davidhalter/jedi-vim'
+Bundle 'ervandew/supertab'
+Bundle 'godlygeek/tabular'
+Bundle 'majutsushi/tagbar'
+
+" vim-scripts repos  （vim-scripts仓库里的，按下面格式填写）  
+Bundle 'a.vim'
+Bundle 'vimwiki'
+
+" non github repos   (非上面两种情况的，按下面格式填写)  
+" Bundle 'git://git.wincent.com/command-t.git'  
+   
+filetype plugin indent on     " required!   /** vimrc文件配置结束 **/  
+
+"                                           /** vundle命令 **/  
+" Brief help  
+" :BundleList          - list configured bundles  
+" :BundleInstall(!)    - install(update) bundles  
+" :BundleSearch(!) foo - search(or refresh cache first) for foo   
+" :BundleClean(!)      - confirm(or auto-approve) removal of unused bundles  
+"     
+" see :h vundle for more details or wiki for FAQ   
+" NOTE: comments after Bundle command are not allowed.. 
+
+if filereadable(expand("~/.vim/vimrc.bundles.local"))
+    source ~/.vim/vimrc.bundles.local
+endif
+
+filetype on
